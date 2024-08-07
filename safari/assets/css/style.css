@@ -1,0 +1,533 @@
+@font-face {
+    font-family: 'inter';
+    src: url('../fonts/inter/Inter_28pt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global changes */
+
+a{
+    text-decoration: none;
+}
+body {
+    font-family: 'inter', sans-serif;
+}
+.container{
+    max-width: 1240px;
+    margin: auto;
+    padding: 0 1.25rem;
+    width: 100%;
+}
+.title {
+    font-size: 3.125rem;
+    margin-bottom: 2.5rem;
+}
+.subtitle {
+    color: #737373;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+.book-a-tour-button {
+    display: inline-block;
+    padding: .65rem 2rem;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+    border-radius: 3.125rem;
+    transition: 0.3s ease;
+}
+.book-a-tour-button:hover {
+    opacity: .9;
+    box-shadow: 0px 0px 4px 4px #b4b4b491
+}
+.banner{
+    position: relative;
+}
+
+/* Header */
+
+header{
+    background-color: #ffffff;
+}
+.site-header-desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .625rem 0;
+}
+header .custom-logo-link{
+    display: flex;
+}
+.site-header-desktop .custom-logo{
+    max-width: 6.75rem;
+    width: 100%;
+    height: auto;
+}
+.site-header-desktop nav{
+    width: 60%;
+}
+#menu-primary{
+    display: flex;
+}
+#menu-primary li{
+    padding: .75rem;
+}
+#menu-primary li a{
+    color: #737373;
+    font-weight: 600;
+}
+#menu-primary li.current_page_item a{
+    color: #000000;
+}
+header .book-a-tour-button{
+    background-color: #000000;
+    color: #ffffff;
+}
+.mobile-menu-container{
+    position: fixed;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    padding: .5rem;
+    z-index: 99999;
+    transition: all .5s;
+}
+.site-header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 0;
+}
+.site-header-mobile .toggle-btn-open,
+.site-header-mobile .toggle-btn-close{
+    background-color: transparent;
+    border: none;
+}
+body.admin-bar .mobile-menu-container{
+    padding-top: 45px;
+}
+.mobile-menu-container #menu-primary {
+    flex-direction: column;
+}
+.menu-close-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.25rem .75rem;
+}
+
+/* Slider */
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    min-height: 50rem;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .7s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+.slide-left {
+    left: -100%;
+}
+.slide-right {
+    left: 100%;
+}
+.slider-controls {
+    position: absolute;
+    top: 43.5rem;
+    width: 100%;
+    text-align: right;
+}
+.slide-content{
+    display: flex;
+    color: #ffffff;
+    width: 100%;
+    justify-content: space-between;
+}
+.slide-content .slider_texts{
+    max-width: 35rem;
+    width: 100%;
+}
+.slide-content h1{
+    font-size: 3.625rem;
+    margin-bottom: .625rem;
+}
+.slide-content p {
+    max-width: 23rem;
+    margin-bottom: 2rem;
+}
+.slide-content ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+.slide-content ul li svg{
+    margin-right: .5rem;
+}
+.slide-content .book-a-tour-button{
+    margin-bottom: 2rem;
+}
+.prev-slide,
+.next-slide{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.prev-slide{
+    margin-right: 2rem;
+}
+.pagination-progress {
+    width: 1px;
+    height: 6rem;
+    background: rgba(255,255,255,0.3);
+    margin: 1rem auto;
+}
+.pagination-progress-percent {
+    width: 1px;
+    background: #fff;
+}
+
+
+/* Calculator */
+
+.calculator-section{
+    padding: 2.5rem 0;
+}
+.calculator-content {
+    display: flex;
+    justify-content: space-between;
+}
+.calculator-content.reversed{
+    flex-direction: row-reverse;
+}
+.calculator-content .square-miles {
+    font-size: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+}
+.calculator-content .square-miles span {
+    font-size: .875rem;
+}
+.calculator-content .percent-of-national-parks {
+    font-size: 2.8rem;
+    display: flex;
+    flex-direction: column;
+}
+.calculator-content .percent-of-national-parks span {
+    font-size: .875rem;
+}
+.calculator-content .counters{
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+.calculator-content h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+}
+.calculator-content .calculator{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+.calculator input,
+.calculator select{
+    width: 31%;
+    padding: 1rem;
+}
+.calculator-content img{
+    width: 100%;
+}
+.calculator-content.reversed .right-text-content{
+    padding-left: 0;
+}
+.calculator-content .right-text-content{
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2.5rem;
+}
+.calculator-content.reversed .left-image{
+    padding-left: 2.5rem;
+}
+.calculator-result{
+    display: none;
+    font-size: 1.125rem;
+}
+
+/* Accordion */
+
+.accordion-section {
+    padding: 6rem 0;
+    background-color: #F8F8F8;
+}
+.accordion-content {
+    display: flex;
+    justify-content: space-between;
+}
+.accordion-left-part {
+    width: 40%;
+}
+.accordion {
+    width: 57%;
+    padding-left: 2.5rem;
+}
+.accordion-title {
+    font-size: 1.5rem;
+    color: #737373;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+.accordion-toggle-icon.close{
+    display: none;
+}
+.accordion-item {
+    border-bottom: 1px solid #EEEEEE;
+}
+.accordion-item.active .accordion-text{
+    margin-bottom: 2.5rem;
+}
+.accordion-item.active .accordion-title{
+    color: #000000;
+}
+.accordion-item.active .accordion-toggle-icon.open{
+    display: none;
+}
+.accordion-item.active .accordion-toggle-icon.close{
+    display: block;
+}
+.accordion-text{
+    height: 0;
+    overflow: hidden;
+}
+
+/* Footer */
+
+footer{
+    background-color: #000000;
+    color: #ffffff;
+}
+footer a{
+    color: #737373;
+    font-size: .875rem;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+.footer-menus{
+    display: flex;
+}
+.footer-menu-1{
+    margin-right: 6rem;
+}
+.footer-menu-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-menus ul{
+    line-height: 1.75rem;
+}
+.footer-menu-name{
+    margin-bottom: .5rem;
+}
+footer .custom-logo{
+    filter: invert(1);
+}
+footer svg{
+    fill: #fff;
+}
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-top: 1px solid #1C1C1C;
+}
+.footer-bottom-left {
+    display: flex;
+    flex-direction: row;
+}
+.footer-bottom-right a{
+    display: inline-block;
+    padding: 0 .5rem;
+}
+#menu-footer-bottom-links {
+    display: flex;
+    flex-direction: row;
+}
+.copyright-text {
+    padding-right: 1rem;
+    color: #737373;
+    font-size: .875rem;
+}
+#menu-footer-bottom-links li {
+    padding: 0 1rem;
+    border-left: 1px solid #737373;
+}
+
+
+@media (max-width: 1024px) {
+    .book-btn-mobile .book-a-tour-button{
+        display: block;
+        text-align: center;
+        margin-top: 2.5rem;
+    }
+    .title{
+        font-size: 2.25rem;
+        margin-bottom: 1.25rem;
+    }
+    .subtitle{
+        font-size: .75rem;
+    }
+    .slider {
+        min-height:calc(100vh - 4rem);
+    }
+    .slider-pagination{
+        display: none;
+    }
+    .slider-controls{
+        bottom: 1.25rem;
+        top: auto;
+        text-align: center;
+    }
+    .slide-content{
+        justify-content: center;
+    }
+    .slide-content .slider_texts{
+        text-align: center;
+    }
+    .slide-content h1{
+        font-size: 2.25rem;
+    }
+    .slide-content p{
+        font-size: .875rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .slide-content ul li{
+        font-size: .75rem;
+    }
+    .slide-content ul{
+        width: max-content;
+        margin: auto;
+    }
+    body.admin-bar .slider{
+        min-height:calc(100vh - 6rem);
+    }
+    .calculator-part{
+        display: none;
+    }
+    .calculator-content{
+        flex-direction: column-reverse !important;
+    }
+    .calculator-content .right-text-content,
+    .calculator-content .left-image{
+        padding: 0 !important;
+        width: 100%;
+    }
+    .calculator-content .square-miles,
+    .calculator-content .percent-of-national-parks{
+        font-size: 1.875rem;
+    }
+    .accordion-section{
+        padding: 3rem 0;
+    }
+    .accordion-content{
+        flex-direction: column;
+    }
+    .accordion-left-part,
+    .accordion{
+        width: 100%;
+    }
+    .accordion{
+        padding-left: 0;
+    }
+    .accordion-title{
+        font-size: 1.125rem;
+    }
+    .accordion-text{
+        font-size: .875rem;
+    }
+    .accordion-item.active .accordion-text{
+        margin-bottom: 1.5rem;
+    }
+    .footer-top{
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+    .footer-menu-1,
+    .footer-menu-2{
+        margin-top: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-menu-1{
+        margin-right: 2.5rem;
+    }
+    .footer-menu-2 .book-a-tour-button{
+        margin-top: 2.5rem;
+    }
+    .footer-bottom-right{
+        text-align: center;
+    }
+    .footer-bottom-left,
+    #menu-footer-bottom-links{
+        flex-direction: column;
+    }
+    footer svg{
+        width: .875rem;
+    }
+    #menu-footer-bottom-links li{
+        padding-left: 0;
+        border-left: 0;
+    }
+    #menu-footer-bottom-links li:first-child{
+        border-right: 1px solid #737373;
+    }
+    .footer-menu-name{
+        font-size: .875rem;
+    }
+    .copyright-text{
+        width: fit-content;
+        border-right: 1px solid #737373;
+    }
+}
